@@ -1,0 +1,152 @@
+:root {
+  --bg: #0f1221;
+  --panel: #171a2b;
+  --key: #232747;
+  --key-hover: #2b3057;
+  --util: #2a2e52;
+  --op: #2f3a66;
+  --eq: #3d7eff;
+  --eq-hover: #2f6cf0;
+  --text: #eef1ff;
+  --muted: #aab1d6;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 20% 0%, #1a1f44 0%, var(--bg) 55%),
+    radial-gradient(900px 700px at 100% 100%, #2a2352 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.calculator {
+  width: min(360px, 92vw);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent),
+    var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  min-height: 86px;
+  display: grid;
+  gap: 6px;
+  align-content: center;
+  margin-bottom: 14px;
+}
+
+.display__history {
+  color: var(--muted);
+  font-size: 0.9rem;
+  min-height: 1.1em;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.display__value {
+  font-size: 2.1rem;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  appearance: none;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 10px;
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: var(--text);
+  background: var(--key);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.06s ease, background-color 0.12s ease, filter 0.12s ease;
+}
+
+.key:hover {
+  background: var(--key-hover);
+}
+
+.key:active {
+  transform: translateY(1px);
+  filter: brightness(0.98);
+}
+
+.key--util {
+  background: var(--util);
+}
+
+.key--util:hover {
+  background: color-mix(in oklab, var(--util), white 8%);
+}
+
+.key--op {
+  background: var(--op);
+}
+
+.key--op:hover {
+  background: color-mix(in oklab, var(--op), white 10%);
+}
+
+.key--eq {
+  background: var(--eq);
+}
+
+.key--eq:hover {
+  background: var(--eq-hover);
+}
+
+.key--wide {
+  grid-column: span 1;
+}
+
+.hint {
+  margin: 12px 2px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .key {
+    transition: none;
+  }
+}
+

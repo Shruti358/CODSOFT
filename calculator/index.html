@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="calculator" aria-label="Calculator">
+        <div class="display" role="group" aria-label="Calculator display">
+          <div class="display__history" data-history aria-live="polite"></div>
+          <div class="display__value" data-display aria-live="polite">0</div>
+        </div>
+
+        <div class="keys" role="group" aria-label="Calculator buttons">
+          <button class="key key--util" data-action="clear" type="button">C</button>
+          <button class="key key--util" data-action="delete" type="button">DEL</button>
+          <button class="key key--util" data-action="percent" type="button">%</button>
+          <button class="key key--op" data-op="/" type="button">÷</button>
+
+          <button class="key" data-digit="7" type="button">7</button>
+          <button class="key" data-digit="8" type="button">8</button>
+          <button class="key" data-digit="9" type="button">9</button>
+          <button class="key key--op" data-op="*" type="button">×</button>
+
+          <button class="key" data-digit="4" type="button">4</button>
+          <button class="key" data-digit="5" type="button">5</button>
+          <button class="key" data-digit="6" type="button">6</button>
+          <button class="key key--op" data-op="-" type="button">−</button>
+
+          <button class="key" data-digit="1" type="button">1</button>
+          <button class="key" data-digit="2" type="button">2</button>
+          <button class="key" data-digit="3" type="button">3</button>
+          <button class="key key--op" data-op="+" type="button">+</button>
+
+          <button class="key key--wide" data-action="toggleSign" type="button">±</button>
+          <button class="key" data-digit="0" type="button">0</button>
+          <button class="key" data-action="decimal" type="button">.</button>
+          <button class="key key--eq" data-action="equals" type="button">=</button>
+        </div>
+
+        <p class="hint" aria-label="Hint">
+          Keyboard: 0-9, + - * /, Enter (=), Backspace (DEL), Escape (C)
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
