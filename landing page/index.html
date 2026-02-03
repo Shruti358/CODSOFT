@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="logo">Creative<span>Landing</span></div>
+        <nav class="nav">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+        
+          <a href="#contact" class="btn btn-outline">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">Modern & Simple</p>
+            <h1>Create a Beautiful Landing Page with Just HTML & CSS</h1>
+            <p class="hero-subtitle">
+              Practice layout, spacing, colors, and typography while building a clean,
+              responsive landing page from scratch.
+            </p>
+            <div class="hero-actions">
+              <a href="#pricing" class="btn">Get Started</a>
+              <a href="#features" class="btn-link">See Features</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <h2>Page Overview</h2>
+              <ul>
+                <li>Neat columns & balanced sections</li>
+                <li>Thoughtful padding & spacing</li>
+                <li>Soft color palette & contrast</li>
+                <li>Clean typography hierarchy</li>
+              </ul>
+              <p class="hero-note">
+                Tip: Avoid overlapping elements by using margins, padding, and
+                `display` properties wisely.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>What You’ll Practice</h2>
+            <p>
+              Each card below is a mini‑goal for your landing page. Try to recreate layouts
+              and tweak the styles to match your own creative idea.
+            </p>
+          </header>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Layout & Columns</h3>
+              <p>
+                Use flexbox to place content side‑by‑side, create balanced columns, and keep
+                everything aligned neatly.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Spacing & Alignment</h3>
+              <p>
+                Practice margins, padding, and gap utilities so your sections feel open,
+                readable, and not cramped.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Color & Typography</h3>
+              <p>
+                Experiment with color palettes, font weights, and sizes to build a strong
+                visual hierarchy.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / Two Column Section -->
+      <section id="about" class="section section-alt">
+        <div class="container two-column">
+          <div>
+            <h2>Focus on Clean, Non‑Overlapping Design</h2>
+            <p>
+              A good landing page isn’t just about fancy effects. It’s mostly about clarity:
+              clear sections, consistent spacing, and elements that never overlap or fight
+              for attention.
+            </p>
+            <p>
+              Use simple CSS rules like <code>display: flex</code>, <code>max-width</code>,
+              and <code>box-sizing: border-box</code> to keep things under control while you
+              experiment with creative layouts.
+            </p>
+          </div>
+          <div class="about-box">
+            <h3>Checklist</h3>
+            <ul>
+              <li>No text touching screen edges</li>
+              <li>Consistent section padding (top & bottom)</li>
+              <li>Buttons easy to see and click</li>
+              <li>Readable fonts on all backgrounds</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section section-alt">
+        <div class="container contact-grid">
+          <div>
+            <h2>Ready to Build Your Own?</h2>
+            <p>
+              Customize this template or rebuild it from scratch. Change colors, fonts,
+              spacing, and layouts until the landing page feels like your own creation.
+            </p>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                rows="3"
+                placeholder="Tell me about your landing page idea"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-full-width">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; <span id="year"></span> Creative Landing. Built with HTML &amp; CSS.</p>
+        <p class="footer-note">
+          Try editing colors, spacing, and fonts in <code>style.css</code> to practice.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Tiny JS snippet just to show the current year in the footer (optional)
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
